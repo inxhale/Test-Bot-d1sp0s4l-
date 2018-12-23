@@ -1,4 +1,5 @@
 import requests
+import datetime
 from time import sleep
 
 url = "https://api.telegram.org/bot739295476:AAHQrEtoLvDjep9giolxCudH9PajKN4hmI0/"
@@ -27,11 +28,18 @@ def send_mess(chta, text):
 	return response
 
 
+def main():
+	update_id = last_update(get_updates_json(url))['update_id']
+	while true:
+		if update_id == last_update(get_updates_json(url))['update_id']
+		send_mess(get_chat_id(last_update(get_updates_json(url))), 'test')
+		update_id += 1
+	sleep(1)
+
 if __name__ == '__name__':
 	main()
 
-	import requests
-import datetime
+
 
 class BotHandler:
 
@@ -56,9 +64,7 @@ class BotHandler:
 
 		return last_update
 
-
-
-greet_bot = BotHandler(token)
+		greet_bot = BotHandler(token)
 greetings = ('здравствуй', 'привет', 'ку', 'здорово')
 now = datetime.datetime.now()
 
@@ -96,3 +102,7 @@ if __name__ == '__main__':
 		main()
 	except KeyboardInterrupt:
 		exit()
+
+
+
+
